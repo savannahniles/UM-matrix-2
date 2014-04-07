@@ -1,5 +1,37 @@
 
 Template.main.created = ->
+  hammer = $('#container').hammer()
+  console.log hammer
+
+  hammer.on "click", (e) ->
+    e.stopPropagation()
+    console.log "clicked///"
+    return
+
+  hammer.on "tap", (e) ->
+    e.stopPropagation()
+    console.log "Tap!"
+    return
+
+  hammer.on "doubletap", (e) ->
+    e.stopPropagation()
+    console.log "doubletap!"
+    return
+
+  hammer.on "pinch", (e) ->
+    e.stopPropagation()
+    console.log "pinch."
+    return
+
+  hammer.on "pinchin", (e) ->
+    e.stopPropagation()
+    console.log "pinchin."
+    return
+
+  hammer.on "touch", (e) ->
+    e.stopPropagation()
+    console.log "touched!"
+    return
 
   $ -> #initialize multitouch.
     window.client = new Caress.Client(
@@ -12,7 +44,7 @@ Template.main.created = ->
     return
 
 Template.dataCanvas.rendered = ->
-  buildCanvas()
+  #buildCanvas()
 
 Template.main.events =
   "click .touch": (d) ->

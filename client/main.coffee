@@ -1,6 +1,6 @@
 
 Template.main.created = ->
-  hammer = $('#dataCanvas').hammer()
+  hammer = $('#container').hammer()
   console.log hammer
 
   hammer.on "click", (e) ->
@@ -56,4 +56,7 @@ Template.main.events =
   "click #dataCanvas": (d) ->
     console.log "Clicked dataCanvas"
     scroller.zoomBy 1.2, true
+
+  "click #container": (d) ->
+    console.log "Clicked dataCanvas"
 

@@ -1,6 +1,6 @@
 
 Template.main.created = ->
-  hammer = $('#container').hammer()
+  hammer = $('#dataCanvas').hammer()
   console.log hammer
 
   hammer.on "click", (e) ->

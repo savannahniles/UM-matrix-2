@@ -37,7 +37,7 @@ Template.main.created = ->
     console.log "here"
     $swipe = $("#container").hammer()
     console.log $swipe
-    $swipe.on "hold tap swipe doubletap transformstart transform transformend dragstart drag dragend swipe release", (e) ->
+    $swipe.on "hold tap swipe doubletap dragstart drag dragend swipe release pinch pinchin pinchout", (e) ->
       e.preventDefault()
       console.log e
       #console.log "Type: " + e.type + ", Fingers: " + e.touches.length + ", Direction: " + e.direction + "<br/>"

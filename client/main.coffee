@@ -39,7 +39,8 @@ Template.main.created = ->
     console.log $swipe
     $swipe.on "hold tap swipe doubletap transformstart transform transformend dragstart drag dragend swipe release", (event) ->
       event.preventDefault()
-      console.log "Type: " + event.type + ", Fingers: " + event.touches.length + ", Direction: " + event.direction + "<br/>"
+      console.log "event"
+      #console.log "Type: " + event.type + ", Fingers: " + event.touches.length + ", Direction: " + event.direction + "<br/>"
       return
     return
 

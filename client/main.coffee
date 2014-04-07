@@ -44,7 +44,7 @@ Template.main.created = ->
     return
 
 Template.dataCanvas.rendered = ->
-  #buildCanvas()
+  buildCanvas()
 
 Template.main.events =
   "click .touch": (d) ->
@@ -58,7 +58,10 @@ Template.main.events =
   #   scroller.zoomBy 1.2, true
 
   "click #container": (d) ->
-    #console.log "Clicked dataCanvas"
+    console.log "Clicked container"
+
+  "touchstart #container": (d) ->
+    console.log "That tickles!"
 
 Template.dataCanvas.swipeme = ->
   Meteor.defer ->

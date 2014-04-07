@@ -48,6 +48,7 @@
 	# Initialize layout
 	container = document.getElementById("container")
 	content = document.getElementById("dataCanvas")
+	console.log content
 	content.style.width = contentWidth + "px"
 	content.style.height = contentHeight + "px"
 

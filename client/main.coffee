@@ -40,7 +40,7 @@ Template.main.created = ->
     $swipe.on "hold tap swipe doubletap dragstart drag dragend swipe release pinch pinchin pinchout", (e) ->
       e.preventDefault()
       console.log e
-      #console.log "Type: " + e.type + ", Fingers: " + e.touches.length + ", Direction: " + e.direction + "<br/>"
+      console.log "Type: " + e.type + ", Fingers: " + e.touches.length + ", Direction: " + e.direction + "<br/>"
       return
     return
 

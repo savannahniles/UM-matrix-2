@@ -65,7 +65,7 @@ Template.main.events =
 
 Template.dataCanvas.swipeme = ->
   Meteor.defer ->
-    $swipe = $("#container")
+    $swipe = $("#container").hammer()
     $swipe.on "hold tap swipe doubletap transformstart transform transformend dragstart drag dragend swipe release", (event) ->
       event.preventDefault()
       console.log "Type: " + event.type + ", Fingers: " + event.touches.length + ", Direction: " + event.direction + "<br/>"

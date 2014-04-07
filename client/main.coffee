@@ -42,7 +42,6 @@ Template.main.created = ->
       console.log "Type: " + event.type + ", Fingers: " + event.touches.length + ", Direction: " + event.direction + "<br/>"
       return
     return
-  return
 
   $ -> #initialize multitouch.
     window.client = new Caress.Client(
